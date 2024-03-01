@@ -19,10 +19,14 @@ jobs:
           node-version: 20.x
       - name: Install dependencies
         run: |
-          yarn install
+          npm install
+      - name: QA
+        run: |
+          npm run lint
+          npm run test
       - name: Release
         env:
-          DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_REGISTRY_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_ADMIN }}
         run: npx semantic-release
