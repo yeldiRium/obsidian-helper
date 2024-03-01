@@ -1,0 +1,44 @@
+{
+  "name": "obsidian-helper",
+  "version": "0.0.1",
+  "description": "obs is a telegram bot that helps me keep my obsidian notebook up to date",
+  "contributors": [
+    {
+      "name": "Hannes Leutloff",
+      "email": "hannes.leutloff@yeldirium.de"
+    }
+  ],
+  "private": false,
+  "type": "module",
+  "bin": {
+    "obs": "build/bin/obs.js"
+  },
+  "engines": {
+    "node": ">=20.11.1"
+  },
+  "dependencies": {
+    "buntstift": "5.0.2",
+    "command-line-interface": "5.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.12",
+    "@typescript-eslint/eslint-plugin": "7.1.0",
+    "@typescript-eslint/parser": "7.1.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-jest": "27.9.0",
+    "jest": "29.7.0",
+    "rimraf": "5.0.5",
+    "ts-jest": "29.1.2",
+    "typescript": "5.3.3"
+  },
+  "scripts": {
+    "build": "npm run clean && npx tsc",
+    "clean": "rimraf ./build/",
+    "run": "node ./build/bin/obs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yeldiRium/obsidian-helper.git"
+  },
+  "license": "MIT"
+}

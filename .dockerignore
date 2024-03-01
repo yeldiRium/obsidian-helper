@@ -1,0 +1,8 @@
+build/
+node_modules/
+test/
+.dockerignore
+.eslintrc
+.gitignore
+Dockerfile
+jest.config.js
