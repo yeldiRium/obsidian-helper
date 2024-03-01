@@ -1,29 +1,31 @@
-import { buntstift } from 'buntstift';
-import { Handlers } from 'command-line-interface';
+import { buntstift } from "buntstift";
+import { Handlers } from "command-line-interface";
 
 const getHandlers = function (): Partial<Handlers> {
   return {
-    commandFailed ({ ex }): void {
+    commandFailed({ ex }): void {
       if (ex instanceof Error && ex.stack) {
         buntstift.verbose(ex.stack, { isVerboseModeEnabled: true });
       }
     },
 
-    commandUnknown ({ unknownCommandName, recommendedCommandName }): void {
-      buntstift.error(`Unknown command '${unknownCommandName}', did you mean '${recommendedCommandName}'?`);
+    commandUnknown({ unknownCommandName, recommendedCommandName }): void {
+      buntstift.error(
+        `Unknown command '${unknownCommandName}', did you mean '${recommendedCommandName}'?`,
+      );
     },
 
-    optionInvalid ({ reason }): void {
+    optionInvalid({ reason }): void {
       buntstift.error(reason);
     },
 
-    optionMissing ({ optionDefinition }): void {
+    optionMissing({ optionDefinition }): void {
       buntstift.error(`Option '${optionDefinition.name}' is missing.`);
     },
 
-    optionUnknown ({ optionName }): void {
+    optionUnknown({ optionName }): void {
       buntstift.error(`Unknown option '${optionName}'.`);
-    }
+    },
   };
 };
 

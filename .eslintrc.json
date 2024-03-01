@@ -1,0 +1,71 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "globals": {
+    "NodeJS": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "impliedStrict": true
+    },
+    "ecmaVersion": "latest",
+    "project": true,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "extended",
+    "import",
+    "jest",
+    "prettier",
+    "unicorn"
+  ],
+  "settings": {
+    "import/extensions": [
+      ".ts",
+      ".js"
+    ],
+    "import/external-module-folders": [
+      "node_modules"
+    ],
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts"
+      ]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".ts",
+          ".js"
+        ]
+      }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "rules": {
+    "import/no-unresolved": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "kebabCase": false,
+          "snakeCase": false,
+          "pascalCase": true
+        }
+      }
+    ]
+  }
+}
