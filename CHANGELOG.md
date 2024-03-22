@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/yeldiRium/obsidian-helper/compare/1.0.0...1.0.1) (2024-03-22)
+
+
+### Bug Fixes
+
+* Actually fix the setup. ([10c92dd](https://github.com/yeldiRium/obsidian-helper/commit/10c92dd0303aeb08dcbe81528c0976e4b4f2ea71))
+* Jest can now follow .js imports. ([a35f7d3](https://github.com/yeldiRium/obsidian-helper/commit/a35f7d3a468612eec62e9bb1a9ca8891e58e5048))
+
 # 1.0.0 (2024-03-01)
 
 
