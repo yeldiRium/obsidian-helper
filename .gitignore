@@ -4,5 +4,8 @@
 # Build artefacts
 *build/
 
+# Security issues
+deployment/
+
 # OS generated files and folders
 npm-debug.log
