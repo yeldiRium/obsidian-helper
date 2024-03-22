@@ -1,4 +1,4 @@
-import { square } from "../lib/foo";
+import { square } from "../lib/foo.js";
 
 describe("foo", (): void => {
   describe("square", (): void => {

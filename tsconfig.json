@@ -3,18 +3,20 @@
     "baseUrl": ".",
     "declaration": true,
     "esModuleInterop": true,
-    "lib": [ "ESNext", "DOM" ],
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "lib": [ "es2023" ],
+    "module": "node16",
+    "moduleResolution": "node16",
     "outDir": "build",
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext"
+    "target": "es2022"
   },
   "include": [
     "./**/*.ts"
   ],
   "exclude": [
-    "./build"
+    "./build/",
+    "./node_modules/"
   ]
 }
